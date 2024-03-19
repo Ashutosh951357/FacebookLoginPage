@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/ashut/Downloads/apiTest/Project2023">
+        <classes>
+            <class name="Test_scenarios.GoogleSearchMethod">
+                <methods>
+                    <include name="SearchOperation"/>
+                    <include name="cliktheLink"/>
+                    <include name="EnterUsernamepassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
