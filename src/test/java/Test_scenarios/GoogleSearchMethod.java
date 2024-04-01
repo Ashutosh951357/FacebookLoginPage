@@ -3,6 +3,7 @@ package Test_scenarios;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import object.Facebookpage;
 import object.GoogleSearchpage;
+import object.SearchLinkdeIn;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
@@ -30,6 +31,7 @@ public class GoogleSearchMethod {
     public void SearchOperation() throws InterruptedException {
         GoogleSearchpage page = new GoogleSearchpage(driver);
         page.searchgoogle("facebook");
+
     }
 
     @Test(priority = 1)
@@ -44,7 +46,15 @@ public class GoogleSearchMethod {
         page.EnterUsername();
         page.Enterpassword();
         page.verifylogin();
+
     }
+    @Test(priority = 3)
+    public void SearchLinkedin()
+    {
+        SearchLinkdeIn page=new SearchLinkdeIn(driver);
+
+    }
+
     //@AfterTest
     // public void aftertest(){  driver.quit();
 }
