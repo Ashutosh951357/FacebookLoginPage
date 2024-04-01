@@ -54,8 +54,5 @@ public class GoogleSearchMethod {
         SearchLinkdeIn page=new SearchLinkdeIn(driver);
 
     }
-
-    //@AfterTest
-    // public void aftertest(){  driver.quit();
 }
 
