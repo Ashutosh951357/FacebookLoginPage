@@ -11,7 +11,6 @@ public class Facebookpage {
     public Facebookpage(WebDriver driver) {
         this.driver = driver;
 
-
     }
 
     By username = By.xpath("//input[@id='email']");

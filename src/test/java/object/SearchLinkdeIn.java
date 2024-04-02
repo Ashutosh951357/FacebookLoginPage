@@ -29,5 +29,6 @@ public class SearchLinkdeIn {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.google.com/gmail/about/");
         System.out.println(driver.getTitle());
+        
     }
 }
