@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import object.Facebookpage;
 import object.GoogleSearchpage;
-import object.MobileWebpageTesting;
 import object.SearchLinkdeIn;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,15 +12,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
 public class GoogleSearchMethod {
     WebDriver driver;
     GoogleSearchpage objectrepo;
-    ChromeOptions opt =new ChromeOptions();
+    ChromeOptions opt = new ChromeOptions();
 
 
     @BeforeTest
@@ -58,19 +55,19 @@ public class GoogleSearchMethod {
         page.verifylogin();
 
     }
+
     @Test(priority = 3)
-    public void SearchLinkedin()
-    {
-        SearchLinkdeIn page=new SearchLinkdeIn(driver);
+    public void SearchLinkedin() {
+        SearchLinkdeIn page = new SearchLinkdeIn(driver);
 
     }
+
     @Test(priority = 4)
-    public void MobileWebpageTesting()
-    {
-        MobileWebpageTesting page=new MobileWebpageTesting(driver);
-
+    public void MobileWebpage() {
+        objectrepo = new GoogleSearchpage(driver);
+        objectrepo.Viewmobile();
 
     }
-
 }
+
 

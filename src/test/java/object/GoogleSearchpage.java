@@ -14,6 +14,8 @@ public class GoogleSearchpage {
     By search_btn = By.xpath(("(//input[@name='btnK'])[1]"));
     By facebook_link = By.xpath("//a//h3[text()='Facebook - log in or sign up']");
 
+    By mobileView= By.xpath("//*[@id='rso']/div/div/div/div[1]/div/div[1]/div/span/a/h3");
+
     public void searchgoogle(String searchinput) {
         try {
             driver.findElement(searchbox).sendKeys(searchinput);
@@ -34,15 +36,17 @@ public class GoogleSearchpage {
             System.out.println("Exception Caught " + e.getMessage());
 
         }
+
     }
-//    public void MobileWebpageTesting() throws InterruptedException {
-//        driver.findElement(iphone_Appstore).click();
-//        Thread.sleep(2000);
-//
-//    }  catch(Exception e){
-//        System.out.println("Exception caught" + e.getMessage());
-//
-//    }
+    public void Viewmobile(){
+        try {
+            driver.findElement(mobileView).click();
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+            System.out.println("Exception caught" +e.getMessage());
+        }
+    }
 
 }
 
